@@ -10,5 +10,8 @@ class ProductosModel(models.Model):
     precio = models.FloatField()
     estado = models.BooleanField(default=True)
 
+    def __str__(self) -> str:
+        return self.nombre
+
     class Meta:
         db_table = "productos"
